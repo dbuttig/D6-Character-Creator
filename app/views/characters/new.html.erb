@@ -1,0 +1,105 @@
+<h1> New Character</h1>
+
+<%= form_for :character, url: characters_path do |f| %>
+  <table>
+    <tr>
+      <td><%= f.label :name %></td>
+      <td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :race %></td>
+      <td><%= f.select :race, [['Human','human']] %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :type %></td>
+      <td><%= f.text_field :type %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :gender %></td>
+      <td><%= f.select :gender, [['Female','female'],['Male','male']] %></td>
+    </tr>
+  </table> <br \><br \>
+
+  <table>
+    <tr>
+      <td><%= f.label :age %></td>
+      <td><%= f.text_field :age %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :height %></td>
+      <td><%= f.text_field :height %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :weight %></td>
+      <td><%= f.text_field :weight %></td>
+    </tr>
+  </table> <br \><br \>
+
+  <table>
+    <tr>
+      <td style="colspan:2">Core Abilities</td>
+    </tr>
+    <tr>
+      <td><%= f.label :coordination %></td>
+      <td><%= f.text_field :coordination %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :endurance %></td>
+      <td><%= f.text_field :endurance %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :reflex %></td>
+      <td><%= f.text_field :reflex %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :strength %></td>
+      <td><%= f.text_field :strength %></td>
+    </tr>
+    <tr><td>&nbsp;</td></tr>
+    <tr>
+      <td style="colspan:2">Optional Abilities (see GM<br \>for which ones you will use)</td>
+    </tr>
+    <tr>
+      <td><%= f.label :confidence %></td>
+      <td><%= f.text_field :confidence %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :intellect %></td>
+      <td><%= f.text_field :intellect %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :knowledge %></td>
+      <td><%= f.text_field :knowledge %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :magic %></td>
+      <td><%= f.text_field :magic %></td>
+    <tr>
+      <td><%= f.label :mechanical %></td>
+      <td><%= f.text_field :mechanical %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :perception %></td>
+      <td><%= f.text_field :perception %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :psionicpower %></td>
+      <td><%= f.text_field :psionicpower %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :technical %></td>
+      <td><%= f.text_field :technical %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :willpower %></td>
+      <td><%= f.text_field :willpower %></td>
+    </tr>
+  </table>
+
+  <p>
+    Additional attributes
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
